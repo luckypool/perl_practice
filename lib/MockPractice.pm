@@ -6,14 +6,16 @@ use MockPractice::CheckHoge;
 use MockPractice::CheckFuga;
 
 use base qw/Class::Accessor::Fast/;
+__PACKAGE__->mk_accessors(qw/hoge fuga/);
 
 sub new {
     my $class = shift;
-    my hoge = MockPractice::CheckHoge->new;
+    my $hoge = MockPractice::CheckHoge->new;
     my $self = {
         hoge => $hoge,
-        fuga => MockPractice::CheckFuga->new;
+        fuga => MockPractice::CheckFuga->new,
     };
+    return bless $self, $class;
 }
 
 sub check_hoge {
