@@ -16,4 +16,18 @@ sub new {
     };
 }
 
+sub check_hoge {
+    my $self = shift;
+    my ($param) = @_;
+    return unless $self->hoge->is_hoge($param);
+    return 1;
+}
+
+sub check_fuga {
+    my $self = shift;
+    my ($param) = @_;
+    return unless $self->fuga->is_fuga($param);
+    return 1;
+}
+
 1;
