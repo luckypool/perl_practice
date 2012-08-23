@@ -1,4 +1,4 @@
-package MockPractice::CheckFuga::Piyo;
+package MockPractice::CheckHoge::Piyo;
 use strict;
 use warnings;
 
