@@ -11,7 +11,7 @@ __PACKAGE__->mk_accessors(qw/hoge fuga/);
 sub new {
     my $class = shift;
     my $self = {
-        hoge => MockPractice::CheckHoge->new;
+        hoge => MockPractice::CheckHoge->new,
         fuga => MockPractice::CheckFuga->new,
     };
     return bless $self, $class;
