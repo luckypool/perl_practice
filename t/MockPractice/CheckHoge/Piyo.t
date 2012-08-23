@@ -16,4 +16,10 @@ subtest 'method_check' => sub {
     can_ok $class, @methods;
 };
 
+subtest 'test is_piyo' => sub {
+    is $piyo->is_piyo(1), 1;
+    is $piyo->is_piyo, undef;
+};
+
+
 done_testing;
