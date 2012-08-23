@@ -23,4 +23,11 @@ sub is_hoge {
     return;
 }
 
+sub is_hoge_piyo {
+    my $self = shift;
+    my ($param) = @_;
+    return $self->piyo->is_piyo($param) if $param;
+    return;
+}
+
 1;
