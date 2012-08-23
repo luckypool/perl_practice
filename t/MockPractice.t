@@ -2,12 +2,17 @@ use strict;
 use warnings;
 
 use Test::More;
+use Test::MockObject;
+use Data::Dumper;
 
 BEGIN {
     use_ok 'MockPractice';
 };
 
 my $class = 'MockPractice';
+
+#Test::MockObject->new->fake_new('MockPractice::CheckHoge');
+#Test::MockObject->new->fake_new('MockPractice::CheckFuga');
 
 my $obj = new_ok $class;
 
