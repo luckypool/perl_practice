@@ -6,13 +6,13 @@ use Test::MockObject;
 use Data::Dumper;
 
 BEGIN {
-    use_ok 'MockPractice';
+    use_ok 'Practice::Mock';
 };
 
-my $class = 'MockPractice';
+my $class = 'Practice::Mock';
 
-#Test::MockObject->new->fake_new('MockPractice::CheckHoge');
-#Test::MockObject->new->fake_new('MockPractice::CheckFuga');
+#Test::MockObject->new->fake_new('Practice::Mock::CheckHoge');
+#Test::MockObject->new->fake_new('Practice::Mock::CheckFuga');
 
 my $obj = new_ok $class;
 
@@ -22,25 +22,25 @@ subtest 'method_check' => sub {
 };
 
 sub __mock_is_fuga {
-    Test::MockObject->new->fake_module('MockPractice::CheckFuga',
+    Test::MockObject->new->fake_module('Practice::Mock::CheckFuga',
         is_fuga => sub { 1 },
     );
 }
 
 sub __mock_is_not_fuga {
-    Test::MockObject->new->fake_module('MockPractice::CheckFuga',
+    Test::MockObject->new->fake_module('Practice::Mock::CheckFuga',
         is_fuga => sub { !1 },
     );
 }
 
 sub __mock_is_hoge {
-    Test::MockObject->new->fake_module('MockPractice::CheckHoge',
+    Test::MockObject->new->fake_module('Practice::Mock::CheckHoge',
         is_hoge => sub { 1 },
     );
 }
 
 sub __mock_is_not_hoge {
-    Test::MockObject->new->fake_module('MockPractice::CheckHoge',
+    Test::MockObject->new->fake_module('Practice::Mock::CheckHoge',
         is_hoge => sub { !1 },
     );
 }

@@ -4,10 +4,10 @@ use warnings;
 use Test::More;
 
 BEGIN {
-    use_ok 'MockPractice::CheckFuga';
+    use_ok 'Practice::Mock::CheckFuga';
 };
 
-my $class = 'MockPractice::CheckFuga';
+my $class = 'Practice::Mock::CheckFuga';
 
 my $fuga = new_ok $class;
 

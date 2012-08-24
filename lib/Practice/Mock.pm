@@ -1,9 +1,9 @@
-package MockPractice;
+package Practice::Mock;
 use strict;
 use warnings;
 
-use MockPractice::CheckHoge;
-use MockPractice::CheckFuga;
+use Practice::Mock::CheckHoge;
+use Practice::Mock::CheckFuga;
 
 use base qw/Class::Accessor::Fast/;
 __PACKAGE__->mk_accessors(qw/hoge fuga/);
@@ -11,8 +11,8 @@ __PACKAGE__->mk_accessors(qw/hoge fuga/);
 sub new {
     my $class = shift;
     my $self = {
-        hoge => MockPractice::CheckHoge->new,
-        fuga => MockPractice::CheckFuga->new,
+        hoge => Practice::Mock::CheckHoge->new,
+        fuga => Practice::Mock::CheckFuga->new,
     };
     return bless $self, $class;
 }

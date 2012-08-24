@@ -4,10 +4,10 @@ use warnings;
 use Test::More;
 
 BEGIN {
-    use_ok 'MockPractice::CheckHoge::Piyo';
+    use_ok 'Practice::Mock::CheckHoge::Piyo';
 };
 
-my $class = 'MockPractice::CheckHoge::Piyo';
+my $class = 'Practice::Mock::CheckHoge::Piyo';
 
 my $piyo = new_ok $class;
 

@@ -1,4 +1,4 @@
-package MockPractice::CheckHoge::Piyo;
+package Practice::Mock::CheckFuga;
 use strict;
 use warnings;
 
@@ -7,7 +7,7 @@ sub new {
     return bless {}, $class;
 }
 
-sub is_piyo {
+sub is_fuga {
     my $self = shift;
     my ($param) = @_;
     return 1 if $param;

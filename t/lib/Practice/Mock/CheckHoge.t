@@ -5,23 +5,23 @@ use Test::More;
 use Test::MockObject;
 
 BEGIN {
-    use_ok 'MockPractice::CheckHoge';
+    use_ok 'Practice::Mock::CheckHoge';
 };
 
-my $class = 'MockPractice::CheckHoge';
+my $class = 'Practice::Mock::CheckHoge';
 
 my $hoge = new_ok $class;
 
 sub __mock_is_piyo {
     Test::MockObject->new->fake_module(
-        'MockPractice::CheckHoge::Piyo',
+        'Practice::Mock::CheckHoge::Piyo',
         is_piyo => sub { 1 },
     );
 }
 
 sub __mock_is_not_piyo {
     Test::MockObject->new->fake_module(
-        'MockPractice::CheckHoge::Piyo',
+        'Practice::Mock::CheckHoge::Piyo',
         is_piyo => sub { undef },
     );
 }
