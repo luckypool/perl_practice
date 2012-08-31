@@ -27,4 +27,27 @@ for my $i (@$fuga) {
 }
 
 
-print Dumper $ENV{TMPDIR};
+sub print_hoge {
+    my ($param) = @_;
+    print Dumper $param;
+}
+
+use Params::Validate;
+sub validate_hoge {
+    my $param = Params::Validate::validate(@_,{
+            hii => 1,
+            hog => 1,
+            ho  => 0,
+        });
+    print Dumper $param;
+}
+
+my @hoge = (hige=>1, piyo=>3, fuga=>5);
+
+print_hoge(\@hoge);
+print_hoge(@hoge);
+
+validate_hoge(hii=>1,hog=>'fuu');
+my @p = (hii=>1,hog=>'fuu', ho=>234)
+validate_hoge(@p);
+
