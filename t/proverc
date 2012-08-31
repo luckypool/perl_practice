@@ -1,0 +1,8 @@
+# proverc
+--lib
+--color
+--failures
+--recurse
+--merge
+--timer
+--trap
