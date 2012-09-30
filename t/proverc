@@ -1,5 +1,6 @@
 # proverc
 --lib
+--verbose
 --color
 --failures
 --recurse
