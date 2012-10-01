@@ -17,11 +17,15 @@ sub new {
     my $self = {
         cache => Cache::Memcached::Fast->new({
                 servers => [
-                    {address => join(':', (SERVER,PORT))},
+                    {address => _get_address()},
                 ],
             }),
     };
     return bless $self, $class;
+}
+
+sub _get_address {
+    return join ':', (SERVER, PORT);
 }
 
 sub set {
