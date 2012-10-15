@@ -6,14 +6,19 @@ use Params::Validate;
 
 use Data::Dumper;
 
-my $hoge = { hoge => 1 };
+my $hoge = {
+    hoge => 1,
+    piyo => '',
+};
 my $fuga = { fuga => undef };
 
 
-print Dumper exists $hoge->{hoge};
-print Dumper exists $hoge->{fuga};
-print Dumper exists $fuga->{fuga};
+print 'exists' . Dumper exists $hoge->{hoge};
+print 'exists' . Dumper exists $hoge->{piyo};
+print 'exists' . Dumper exists $hoge->{fuga};
+print 'exists' . Dumper exists $fuga->{fuga};
 
-print Dumper defined $hoge->{hoge};
-print Dumper defined $hoge->{fuga};
-print Dumper defined $fuga->{fuga};
+print 'defined' . Dumper defined $hoge->{hoge};
+print 'defined' . Dumper defined $hoge->{piyo};
+print 'defined' . Dumper defined $hoge->{fuga};
+print 'defined' . Dumper defined $fuga->{fuga};
